@@ -10,15 +10,17 @@
     --White: hsl(0, 0%, 100%);
     --violet-100: hsl(270, 3%, 87%);
     --violet-300: hsl(279, 6%, 55%);
+    --violet-700: hsl(277, 49%, 17%);
     --violet-900: hsl(278, 68%, 11%);
 }
 body{
     width: 100%;
-    Font-size: 1.125rem
+    Font-size: 1.125rem;
+    background-color: var(--White);
 }
 .bg-main{
     margin: 0;
-    width: 40%;
+    width: 35%;
     height: 100%;
     z-index: -10;
     position: fixed;
@@ -43,7 +45,7 @@ section .cardImg{
     width: 100%;
     height: 250px;
     margin-top: 15%;
-    margin-left: 15%;
+   
     
     background-repeat: no-repeat;
     background-image: url(./images/bg-card-front.png); 
@@ -53,11 +55,13 @@ section .cardImg{
 .numberCard{
     width: 100%;
     margin-top: 15%;
-    letter-spacing: 5px ;
-   
-    
-  
-  
+    overflow: hidden;
+    letter-spacing: 5px ; 
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.numberCard h1{
+    font-size: 1.75rem;
 }
 
 .rodape{
@@ -72,9 +76,10 @@ section .cardImg{
     width: 450px;
     height: 250px;
     margin-top: 5%;
-    margin-left: 25%;
+    margin-left: 10%;
     background-repeat: no-repeat;
     background-image: url(./images/bg-card-back.png);
+    
 
 }
 .cvc{
@@ -83,6 +88,7 @@ section .cardImg{
     padding: 24% 13%;
     letter-spacing: 3px;
     color:var(--White);
+   
 }
 
 
@@ -95,7 +101,7 @@ section .cardImg{
 form{
     width: 100%;
     display: block;
-    padding: 25% 0;
+    padding: 30% 0;
   
 }
 form fieldset{
@@ -106,21 +112,51 @@ fieldset p{
     font-weight: 500;
 }
 fieldset [type="text"]{
-    width: 80%;
     padding: 2%;
+    height: 60%;
+    margin-top: 1%;
     margin-bottom: 5%;
+    Font-size: 1.125rem;
 
-    border: 1px solid gray;
+    border: 1px solid var(--violet-100);
     border-radius: 8px;
-    
-    
+}
+fieldset [type="text"]:hover{
+    cursor: pointer;
+    border: 1px solid var(--violet-300);
+}
+
+fieldset .textArea{
+    width: 80%;  
 }
 .dataCard{
     display: flex;
-    justify-content: space-between;
-    
-    width: 180px;
-}
-input .numbercvc{
     width: 80%;
+
+    margin-bottom: 5%;
+
+}
+.dateLegend{
+    width: 50%;
+}
+.dateLegend P{
+    display: block;
+}
+
+.data{
+    width: 30%;
+    margin-right: 5%;
+}
+
+.btn{
+    width: 80%;
+    padding: 3%;
+    font-size: 18px;
+    color: var(--White);
+    background-color: var(--violet-900);
+    border-radius: 8px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--violet-700);
 }
