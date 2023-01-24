@@ -102,8 +102,9 @@ form{
     width: 100%;
     display: block;
     padding: 30% 0;
-  
+    
 }
+
 form fieldset{
     border: none;
 }
@@ -117,22 +118,25 @@ fieldset [type="text"]{
     margin-top: 1%;
     margin-bottom: 5%;
     Font-size: 1.125rem;
+    font-weight: 500;
 
-    border: 1px solid var(--violet-100);
+    border: 2px solid var(--violet-100);
     border-radius: 8px;
 }
 fieldset [type="text"]:hover{
     cursor: pointer;
-    border: 1px solid var(--violet-300);
+    border: 2px solid var(--violet-300);
 }
+
 
 fieldset .textArea{
     width: 80%;  
 }
+
+
 .dataCard{
     display: flex;
     width: 80%;
-
     margin-bottom: 5%;
 
 }
@@ -144,8 +148,9 @@ fieldset .textArea{
 }
 
 .data{
-    width: 30%;
-    margin-right: 5%;
+    width: 40%;
+    margin-right: 3%;
+    padding: 10%;
 }
 
 .btn{
@@ -159,4 +164,7 @@ fieldset .textArea{
 .btn:hover{
     cursor: pointer;
     background-color: var(--violet-700);
+}
+.numbercvc{
+    width: 100%;
 }
