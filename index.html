@@ -30,14 +30,12 @@
     </div>
   </div>
   <div class="registration">
-    <form> 
+    <form id ="form"> 
       <fieldset>
           <p>CARDHOLDER NAME</p>
           <div>
             <input type="text" class="textArea"  id="nameCard" name="nameUser" onkeyup="userNameCard()" placeholder="e.g. Jane Applesed">
           </div>
-          
-
           <p>CARD NUMBER</p>
           <div>
             <input type="text"class="textArea"id="numberCardForm" name="number" onkeyup="userNumberCard()" placeholder="e.g.1234 5678 9123 0000">
@@ -54,10 +52,8 @@
                   <input class="numbercvc" id="cvc" type="text" onkeyup="userCvc()" placeholder="e.g.123">
                 </div>
         </div>
-          <div>
-              <input class="btn" type="submit"  name="confirm" value="Confirm"> 
-          </div>
        </fieldset> 
+       <input class="btn" type="submit"  name="confirm" value="Confirm"> 
     </form>
   </div>
     </section>
