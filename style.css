@@ -37,6 +37,7 @@ section{
 section .cardImg{ 
    width: 50%;
    display: block;
+   margin-left: 5%;
 }
 .cardFront{
     display: block;
@@ -91,19 +92,33 @@ section .cardImg{
    
 }
 
-
 .registration{
     width: 40%;
     display: flex;
     justify-content: center;
     
 }
+
+
 form{
     width: 100%;
     display: block;
     padding: 30% 0;
-  
+    
 }
+
+fieldset > .required{
+    margin-bottom: 4%;
+}
+
+#spanRequired{
+    display: none;
+    color: #ff0000bb;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
 form fieldset{
     border: none;
 }
@@ -115,24 +130,27 @@ fieldset [type="text"]{
     padding: 2%;
     height: 60%;
     margin-top: 1%;
-    margin-bottom: 5%;
     Font-size: 1.125rem;
+    font-weight: 500;
 
-    border: 1px solid var(--violet-100);
+    border: 2px solid var(--violet-100);
     border-radius: 8px;
 }
 fieldset [type="text"]:hover{
     cursor: pointer;
-    border: 1px solid var(--violet-300);
+    border: 2px solid var(--violet-300);
 }
+
+
 
 fieldset .textArea{
     width: 80%;  
 }
+
+
 .dataCard{
     display: flex;
     width: 80%;
-
     margin-bottom: 5%;
 
 }
@@ -144,14 +162,16 @@ fieldset .textArea{
 }
 
 .data{
-    width: 30%;
-    margin-right: 5%;
+    width: 40%;
+    margin-right: 3%;
+    padding: 10%;
 }
 
 .btn{
     width: 80%;
     padding: 3%;
     font-size: 18px;
+    margin-top: 10px;
     color: var(--White);
     background-color: var(--violet-900);
     border-radius: 8px;
@@ -159,4 +179,55 @@ fieldset .textArea{
 .btn:hover{
     cursor: pointer;
     background-color: var(--violet-700);
+}
+.numberCvc{
+    width: 100%;
+}
+
+@media (max-width: 785px) {
+
+
+.bg-main{
+    margin: 0 auto ;
+    width: 100%;
+    height: 35%;
+    position: absolute;
+}
+
+section{
+    display: block;
+}
+
+section .cardImg{
+    width: 100%;
+}
+.cardFront{
+    position: relative;
+    z-index: 11;
+    display: block;
+    padding: 5%;
+    max-width: 447px;
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+   
+    
+    background-repeat: no-repeat;
+    background-image: url(./images/bg-card-front.png); 
+    color: var(--White)
+}
+.cardBack{
+    position: relative;
+    display: block;
+    width: 450px;
+    height: 250px;
+    margin-top: -100px;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-image: url(./images/bg-card-back.png);
+    
+
+}
+
+
 }

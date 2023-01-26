@@ -9,46 +9,56 @@
   
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
+
 <body>
   <img class="bg-main" src="./images/bg-main-desktop.png" alt="">
   <section>
-  <div>
-</div>
+
   <div class="cardImg">
+    
     <div class="cardFront"> <div class="card-logo"><img src="./images/card-logo.svg" alt=""></div>
-    <div class="numberCard"  id="cardNumber"><h1>0000 0000 0000 0000</h1></div>
-    <div class="rodape">
-      <div class="nameUser" id="userName">Felicia Leire</div> 
-        <div class="dateCard" > <span id="dateCard" >00</span>/<span id="yearCard">00</span></div>
-    </div>
+
+    <div class="numberCard"  id="numberCardImg"><h1>0000 0000 0000 0000</h1></div>
+
+  <div class="rodape">
+       <div class="nameUser" id="userName">Felicia Leire</div> 
+       <div class="dateCard" > <span id="dateCard" >00</span>/<span id="yearCard">00</span></div>
+  </div>
   </div>
     <div class="cardBack"> 
       <div class="cvc" id="cvcCard">000</div>
     </div>
   </div>
   <div class="registration">
-    <form> 
+    <form id ="form"> 
       <fieldset>
           <p>CARDHOLDER NAME</p>
-          <div><input type="text" class="textArea" id="nameCard" name="nameUser" onkeyup="userNameCard()" placeholder="e.g. Jane Applesed"></div>
-          <p>CARD NUMBER</p>
-          <div><input type="text"class="textArea"id="numberCard" name="number" onkeyup="userNumberCard()" placeholder="e.g.1234 5678 9123 0000"></div>
-
-          <div class="dataCard">
-                  <div class="dateLegend">
-                    <p>EXP.DATE(MM/YY)</p>
-                    <input class="data" id="date" type="text" onkeyup="dateCard()"  placeholder="00">
-                    <input class="data" id="year" type="text" onkeyup="yearCard()" placeholder="YY"> 
-                  </div>
-                  <div class="dateLegend">
-                  <P>CVC</P>
-                  <input class="numbercvc" id="cvc" type="text" onkeyup="userCvc()" placeholder="e.g.123">
+          <div class="required">
+            <input type="text" class="textArea"  id="nameCard" name="nameUser" onkeyup="userNameCard()" placeholder="e.g. Jane Applesed">
+            <span id="spanRequired">Name must be more than 6 characters</span>
           </div>
+          <p>CARD NUMBER</p>
+          <div class="required">
+            <input type="text"class="textArea"id="numberCardForm" name="number" onkeyup="userNumberCard()" placeholder="e.g.1234 5678 9123 0000">
+            <span id="spanRequired">Wrong format, numbers only</span>
+          </div>
+
+          <div class="dataCard required">
+                 <div class="dateLegend">
+                   <p>EXP. DATE (MM/YY)</p>
+                   <input class="data" id="date" type="text" onkeyup="dateCard()"  placeholder="00">
+                   <input class="data" id="year" type="text" onkeyup="yearCard()" placeholder="YY">
+                   <span id="spanRequired">Can't be blank</span> 
+                </div>
+                <div class="dateLegend">
+                  <P>CVC</P>
+                  <input class="numberCvc" id="cvc" type="text" onkeyup="userCvc()" placeholder="e.g.123">
+                  <span id="spanRequired" class="spanRequired">Can't be blank</span>
+                </div>
         </div>
-          <div>
-              <input class="btn" type="submit"  name="confirm" value="Confirm"> </div>
-          </fieldset> 
-      </form>
+       </fieldset> 
+       <input class="btn" type="submit"  name="confirm" value="Confirm"> 
+    </form>
   </div>
     </section>
   </div>
