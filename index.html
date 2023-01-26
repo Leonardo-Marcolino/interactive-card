@@ -9,11 +9,11 @@
   
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
+
 <body>
   <img class="bg-main" src="./images/bg-main-desktop.png" alt="">
   <section>
-  <div>
-</div>
+
   <div class="cardImg">
     
     <div class="cardFront"> <div class="card-logo"><img src="./images/card-logo.svg" alt=""></div>
@@ -33,23 +33,27 @@
     <form id ="form"> 
       <fieldset>
           <p>CARDHOLDER NAME</p>
-          <div>
+          <div class="required">
             <input type="text" class="textArea"  id="nameCard" name="nameUser" onkeyup="userNameCard()" placeholder="e.g. Jane Applesed">
+            <span id="spanRequired">Name must be more than 6 characters</span>
           </div>
           <p>CARD NUMBER</p>
-          <div>
+          <div class="required">
             <input type="text"class="textArea"id="numberCardForm" name="number" onkeyup="userNumberCard()" placeholder="e.g.1234 5678 9123 0000">
+            <span id="spanRequired">Wrong format, numbers only</span>
           </div>
 
-          <div class="dataCard">
+          <div class="dataCard required">
                  <div class="dateLegend">
                    <p>EXP. DATE (MM/YY)</p>
                    <input class="data" id="date" type="text" onkeyup="dateCard()"  placeholder="00">
-                   <input class="data" id="year" type="text" onkeyup="yearCard()" placeholder="YY"> 
+                   <input class="data" id="year" type="text" onkeyup="yearCard()" placeholder="YY">
+                   <span id="spanRequired">Can't be blank</span> 
                 </div>
                 <div class="dateLegend">
                   <P>CVC</P>
-                  <input class="numbercvc" id="cvc" type="text" onkeyup="userCvc()" placeholder="e.g.123">
+                  <input class="numberCvc" id="cvc" type="text" onkeyup="userCvc()" placeholder="e.g.123">
+                  <span id="spanRequired" class="spanRequired">Can't be blank</span>
                 </div>
         </div>
        </fieldset> 
